@@ -1,17 +1,12 @@
-import { useState } from "react"
+import TableLetter from './TableLetter'
 
-const TableCell = ({ word, index }) => {
-  const [flip, setFlip] = useState(false)
-
-  setTimeout(() => {
-    setFlip(true)
-  }, 100 * index)
+const TableCell = ({ word}) => {
+  
 
   return (
     <td>
-      {Array.from(word).map((letter, _index) => (
-        <div className={flip ? "flip" : null}>
-          {flip ? letter : null}</div>
+      {Array.from(word).map((letter, index) => (
+      <TableLetter key={index} letter={letter} index={index}/>
       ))}
     </td>
   )

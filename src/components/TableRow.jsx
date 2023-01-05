@@ -10,13 +10,8 @@ const TableRow = ({ flight }) => {
   return (
     <tr>
       <td>✈</td>
-      {/* <td>{flight.departing}</td>
-      <td>{flight.destination}</td>
-      <td>{flight.flightNumber}</td>
-      <td>{flight.gate}</td>
-      <td>{flight.status}</td> */}
-      {words?.map((word, index) => (
-      <TableCell key={index} word={word} index={index}/>
+      {words?.map((word, _index) => (
+      <TableCell key={_index} word={word}/>
       )).slice(1)}
     </tr>
   )
